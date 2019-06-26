@@ -1,0 +1,230 @@
+﻿<ROOT>
+	<info>
+	<WindowLabel>Оболочка для CRYPTEST_51_16</WindowLabel>
+	</info>
+	<tabs>
+		<tab name="Информация"  key = "?">
+			<fields>
+			</fields>
+		</tab>
+        <tab name="Создать пару ключей RSA" key = "g">
+			<fields>
+				<field order="1" type="number" label="Длинна ключа"></field>
+				<field order="2" type="outputFile" label="Файл с личным ключём (ключем расшифрования)"></field>
+				<field order="3" type="outputFile" label="Файл с открытым ключём (ключем шифрования)"></field>
+				<field order="4" type="text" label="Случайный параметр"></field>
+			</fields>
+		</tab>
+		 <tab name="Зашифровать строку алгоритмом RSA" key = "rq">
+			<fields>
+				<field order="1" type="inputFile" label="Файл с открытым ключём (ключем шифрования)"></field>
+				<field order="2" type="text" label="Случайное значениее"></field>
+				<field order="3" type="text" label="Соообщение"></field>
+			</fields>
+		</tab>
+		 <tab name="Расшифровать строку алгоритмом RSA" key = "rw">
+			<fields>
+				<field order="1" type="inputFile" label="Файл с личным ключём (ключем расшифрования)"></field>
+				<field order="2" type="text" label="Зашифрованное сообщение"></field>
+			</fields>
+		</tab>
+		<tab name="Зашифровать файл алгоритмом RSA" key = "re">
+			<fields>
+				<field order="1" type="inputFile" label="Файл для шифрования"></field>
+				<field order="2" type="outputFile" label="Зашифрованный файл"></field>
+				<field order="3" type="inputFile" label="Файл с открытым ключём (ключем шифрования)"></field>
+				<field order="4" type="text" label="Случайный параметр"></field>
+			</fields>
+		</tab>
+		<tab name="Расшифровать файл алгоритмом RSA" key = "rd">
+			<fields>
+				<field order="1" type="outputFile" label="Расшифрованный файл"></field>
+				<field order="2" type="outputFile" label="Зашифрованный файл"></field>
+				<field order="3" type="inputFile" label="Файл с личным ключём (ключем расшифрования)"></field>
+			</fields>
+		</tab>
+		<tab name="Подписать файл, используя RSA (создать ЭЦП)" key = "rs">
+			<fields>
+				<field order="1" type="inputFile" label="Файл с открытым ключём (ключем шифрования)"></field>
+				<field order="2" type="inputFile" label="Файл который требуется подписать"></field>
+				<field order="3" type="outputFile" label="ЭЦП"></field>
+				<field order="4" type="text" label="Случайный параметр"></field>
+			</fields>
+		</tab>...........
+		<tab name="Проверить цифровую подпись ЭЦП, используя алгоритм RSA" key = "rv">
+			<fields>
+				<field order="1" type="inputFile" label="Файл с личным ключём (ключем расшифрования)"></field>
+				<field order="2" type="inputFile" label="Файл для которого проверяется подписать"></field>
+				<field order="3" type="inputFile" label="Файл ЭЦП"></field>
+			</fields>
+		</tab>
+		<tab name="Создать сертификат для ключа" key = "p">
+			<fields>
+				<field order="1" type="inputFile" label="Файл с открытым ключём (ключем шифрования)"></field>
+				<field order="2" type="inputFile" label="Файл для которого создается сертификат"></field>
+				<field order="3" type="outputFile" label="Файл хранения сертификата"></field>
+				<field order="4" type="text" label="Случайный параметр"></field>
+				<field order="5" type="number" label="IP адрес владельца сетификата"></field>
+			</fields>
+		</tab>
+		<tab name="Расшифровать и проверить сертификат ключа" key = "k">
+			<fields>
+				<field order="1" type="inputFile" label="Файл с сертификатом"></field>
+				<field order="2" type="outputFile" label="Расшифрованный файл"></field>
+				<field order="3" type="inputFile" label="Файл с личным ключём (ключем расшифрования)"></field>
+			</fields>
+		</tab>
+		<tab name="Вычислить свертку (хэш-код) RIPEMD-160, SHA256,SHA384, SHA512 сообщения" key = "m">
+			<fields>
+				<field order="1" type="inputFile" label="Файл для которого создается хэш-код"></field>
+				<field order="2" type="outputFile" label="Файл для сохранения хэш-кода"></field>
+				<field order="3" type="comboBox" label="Хэш функция">
+					<comboBoxItem key="0" value = "RIPEMD-160"></comboBoxItem>
+					<comboBoxItem key="1" value = "SHA256"></comboBoxItem>
+					<comboBoxItem key="2" value = "SHA384"></comboBoxItem>
+					<comboBoxItem key="3" value = "SHA512"></comboBoxItem>
+				</field>
+			</fields>
+		</tab>
+		<tab name="Зашифровать строку алгоритмом GOST 28147-89 в режиме CBC" key = "te">
+			<fields>
+				<field order="1" type="text" label="Ключ шифрования"></field>
+				<field order="2" type="text" label="Строка для шифрования"></field>
+			</fields>
+		</tab>
+		<tab name="Расшифровать строку алгоритмом GOST 28147-89 в режиме CBC" key = "td">
+			<fields>
+				<field order="1" type="text" label="Ключ шифрования"></field>
+				<field order="2" type="text" label="Строка для расшифрования"></field>
+			</fields>
+		</tab>
+		<tab name="Зашифровать  файл алгоритмом GOST 28147-89 в режиме CBC" key = "e">
+			<fields>
+				<field order="1" type="inputFile" label="Исходный файл"></field>
+				<field order="3" type="text" label="Ключ шифрования"></field>
+				<field order="2" type="outputFile" label="Зашифрованный файл"></field>
+			</fields>
+		</tab>
+		<tab name="Расшифровать файл алгоритмом GOST 28147-89 в режиме CBC" key = "d">
+			<fields>
+				<field order="2" type="outputFile" label="Расшифрованный файл"></field>
+				<field order="3" type="text" label="Ключ шифрования"></field>
+				<field order="1" type="inputFile" label="Зашифрованный файл"></field>
+			</fields>
+		</tab>
+		<tab name="Преобразовать файл в формат RADIX64" key = "e64">
+			<fields>
+				<field order="2" type="outputFile" label="Преобразованный файл"></field>
+				<field order="1" type="inputFile" label="Файл для преобразования"></field>
+			</fields>
+		</tab>
+		<tab name="Снять преобразование RADIX64 и преобразовать в двоичный файл" key = "d64">
+			<fields>
+				<field order="2" type="outputFile" label="Восстановленный файл"></field>
+				<field order="1" type="inputFile" label="Преобразованный файл"></field>
+			</fields>
+		</tab>
+		<tab name="Получить шестнадцатеричный код файла из двоичного" key = "e16">
+			<fields>
+				<field order="2" type="outputFile" label="Преобразованный файл"></field>
+				<field order="1" type="inputFile" label="Файл для преобразования"></field>
+			</fields>
+		</tab>
+		<tab name="Получить двоичный код файла из шестнадцатеричного" key = "d16">
+			<fields>
+				<field order="2" type="outputFile" label="Восстановленный файл"></field>
+				<field order="1" type="inputFile" label="Файл для преобразования"></field>
+			</fields>
+		</tab>
+		<tab name="Разбить файл на части" key = "s">
+			<fields>
+				<field order="1" type="inputFile" label="Исходный файл"></field>
+				<field order="2" type="text" label="Cлучайный параметр"></field>
+				<field order="3" type="number" label="На сколько частей разделить файл"></field>
+				<field order="4" type="number" label="Сколько частей требуется для восстановления"></field>
+			</fields>
+		</tab>
+		<tab name="Собрать файл из частей" key = "j">
+			<fields>
+				<field order="1" type="outputFile" label="Имя собранного файла"></field>
+				<field order="2" type="inputFileMultiple" label="Части файла"></field>
+			</fields>
+		</tab>
+		<tab name="Сжать файл" key = "z">
+			<fields>
+				<field order="1" type="inputFile" label="файл для сжатия"></field>
+				<field order="2" type="outputFile" label="Сжатый файл"></field>
+				<field order="3" type="comboBox" label="Уровень сжатия">
+					<comboBoxItem key="1" value = "1"></comboBoxItem>
+					<comboBoxItem key="2" value = "2"></comboBoxItem>
+					<comboBoxItem key="3" value = "3"></comboBoxItem>
+					<comboBoxItem key="4" value = "4"></comboBoxItem>
+					<comboBoxItem key="5" value = "5"></comboBoxItem>
+					<comboBoxItem key="6" value = "6"></comboBoxItem>
+					<comboBoxItem key="7" value = "7"></comboBoxItem>
+					<comboBoxItem key="8" value = "8"></comboBoxItem>
+					<comboBoxItem key="9" value = "9"></comboBoxItem>
+				</field>
+				<field order="4" type="comboBox" label="Удалить исходный файл?">
+					<comboBoxItem key="n" value = "Нет"></comboBoxItem>
+					<comboBoxItem key="y" value = "Да"></comboBoxItem>
+				</field>
+			</fields>
+		</tab>
+		<tab name="Восстановить файл" key = "u">
+			<fields>
+				<field order="1" type="inputFile" label="Сжатый файл"></field>
+				<field order="2" type="outputFile" label="Восстановленный файл"></field>
+				<field order="3" type="comboBox" label="Удалить исходный файл?">
+					<comboBoxItem key="n" value = "Нет"></comboBoxItem>
+					<comboBoxItem key="y" value = "Да"></comboBoxItem>
+				</field>
+			</fields>
+		</tab>
+		<tab name="Поместить файлы в контейнер" key = "c">
+			<fields>
+				<field order="1" type="outputFile" label="Файл контейнер"></field>
+				<field order="2" type="inputFileMultiple" label="Помещаемые в контейнер файлы"></field>
+			</fields>
+		</tab>
+		<tab name="Поместить файлы в сжатый контейнер" key = "fz">
+			<fields>
+				<field order="1" type="outputFile" label="Файл контейнер"></field>
+				<field order="2" type="inputFileMultiple" label="Помещаемые в контейнер файлы"></field>
+			</fields>
+		</tab>
+		<tab name="Поместить файлы в контейнер формата RADIX64" key = "fr">
+			<fields>
+				<field order="1" type="outputFile" label="Файл контейнер"></field>
+				<field order="2" type="inputFileMultiple" label="Помещаемые в контейнер файлы"></field>
+			</fields>
+		</tab>
+		<tab name="Выделить файлы из контейнера" key = "o">
+			<fields>
+				<field order="1" type="inputFile" label="Файл контейнер"></field>
+				<field order="3" type="comboBox" label="Удалить исходный файл?">
+					<comboBoxItem key="n" value = "Нет"></comboBoxItem>
+					<comboBoxItem key="y" value = "Да"></comboBoxItem>
+				</field>
+			</fields>
+		</tab>
+		<tab name="Выделить файлы из сжатого контейнера" key = "fu">
+			<fields>
+				<field order="1" type="inputFile" label="Файл контейнер"></field>
+				<field order="3" type="comboBox" label="Удалить исходный файл?">
+					<comboBoxItem key="n" value = "Нет"></comboBoxItem>
+					<comboBoxItem key="y" value = "Да"></comboBoxItem>
+				</field>
+			</fields>
+		</tab>
+		<tab name="Выделить файлы из контейнера формата RADIX64" key = "fx">
+			<fields>
+				<field order="1" type="inputFile" label="Файл контейнер"></field>
+				<field order="3" type="comboBox" label="Удалить исходный файл?">
+					<comboBoxItem key="n" value = "Нет"></comboBoxItem>
+					<comboBoxItem key="y" value = "Да"></comboBoxItem>
+				</field>
+			</fields>
+		</tab>
+	</tabs>
+</ROOT>

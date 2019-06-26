@@ -1,0 +1,49 @@
+﻿<Window x:Class="ShellForConsole.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShellForConsole"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <DockPanel LastChildFill="True">
+        <Grid DockPanel.Dock="Top" >
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Margin="10,10,377,0" Text="Исполняемый файл" Height="20" VerticalAlignment="Top"/>
+            <TextBox Name ="PathToConsole" Grid.Row="0" Margin="145,10,105,0" Height="20" VerticalAlignment="Top" IsReadOnly="True"/>
+            <Button Name="ConsoleSelect" Grid.Row="0" Margin="0,10,10,-2" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="90" Click="ConsoleSelect_Click">Выбрать</Button>
+            <TextBlock Grid.Row="1" Margin="10,10,377,0" Text="Файл разметки" Height="20" VerticalAlignment="Top"/>
+            <TextBox Name ="PathToPattern" Grid.Row="1" Margin="145,10,105,0" Height="20" VerticalAlignment="Top" IsReadOnly="True"/>
+            <Button Name="PatternSelect" Grid.Row="1" Margin="0,10,10,-2" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="90" Click="PatternSelect_Click">Выбрать</Button>
+            
+        </Grid>
+        <Grid Name="BottomGrid"   Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ComboBox Grid.Row="0" Grid.ColumnSpan="3" Height="20" Margin="10,10,10,10" Name="ComboBox" SelectionChanged="ComboBox_SelectionChanged"></ComboBox>
+            <GridSplitter  Grid.Row="1" Width="3" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Center"></GridSplitter>
+            <ScrollViewer VerticalScrollBarVisibility="Auto"  Grid.Row="1"  Grid.Column="0">
+                <Grid Name="MainGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </ScrollViewer>
+            <TextBox  Grid.Row="1" Name="ConsoleOut" Grid.Column="2" IsReadOnly="True" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto"></TextBox>
+        </Grid>
+    </DockPanel>
+
+</Window>
